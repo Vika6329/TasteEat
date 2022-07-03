@@ -1,0 +1,16 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+@import 'mixins';
+@import 'global';
+
+@import 'components/common/header';
+@import 'components/common/about';
+@import 'components/common/menu';
+@import 'components/common/reviews';
+@import 'components/common/offers';
+@import 'components/common/popular';
+@import 'components/common/services';
+@import 'components/common/news';
+@import 'components/common/book';
+@import 'components/common/footer';

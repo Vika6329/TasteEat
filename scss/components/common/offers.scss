@@ -1,0 +1,116 @@
+.offers {
+  padding: 140px 0 120px;
+
+  @include mq('desktop') {
+    padding: 70px 0;
+  }
+
+  @include mq('phone') {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq('desktop') {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 665px;
+    width: 100%;
+    @extend %bg;
+    padding: 40px;
+
+    @include mq('desktop') {
+      margin: 0 auto;
+    }
+
+    @include mq('tablet') {
+      padding: 25px;
+    }
+
+    @include mq('phone') {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include mq('desktop') {
+        margin-right: auto;
+        margin-bottom: 25px;
+      }
+    }
+
+
+    &--burger {
+      background-image: url('../images/offers/bg1.jpg');
+    }
+
+    &--pizza {
+      background-image: url('../images/offers/bg2.jpg');
+
+      .offers__price {
+        color: $white;
+        background-image: url('../images/offers/price-2.svg');
+      }
+    }
+  }
+
+  &__price {
+    letter-spacing: 0.15px;
+    text-transform: uppercase;
+    @extend %josefin;
+    font-size: 15px;
+    @extend %bg;
+    background-image: url('../images/offers/price-1.svg');
+    max-width: 150px;
+    width: 100%;
+    text-align: center;
+
+    @include mq('phone') {
+      margin: 0 auto 25px;
+    }
+
+    span {
+      display: block;
+      letter-spacing: 0.2px;
+      font-size: 60px;
+      @extend %infant;
+      line-height: 1;
+      margin-bottom: 40px;
+    }
+  }
+
+  .badge {
+
+    &--inner {
+
+      &::before,
+      &::after {
+        background-color: #292E36;
+      }
+    }
+  }
+
+  &__img {
+    @include mq('tablet') {
+      max-width: 250px;
+    }
+  }
+}

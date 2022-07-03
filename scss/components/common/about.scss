@@ -1,0 +1,149 @@
+.about {
+  background-color: #FFF8F5;
+  padding: 100px 0;
+
+  @include mq('tablet') {
+    fp: 70px 0;
+  }
+
+  @include mq('phone') {
+    padding: 50px 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 65px;
+
+    @include mq('desktop') {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    @include mq('tablet') {
+      padding-bottom: 20px;
+      justify-content: flex-start;
+    }
+
+    @include mq('phone') {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 100px;
+
+    @include mq('phone') {
+      padding-left: 75px;
+    }
+
+    &::before {
+      @include pseudo;
+      left: 0;
+      width: 83px;
+      height: 83px;
+      @extend %bg;
+
+      @include mq('phone') {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    &--place {
+      &::before {
+        background-image: url('../images/global/place.svg');
+      }
+    }
+
+    &--time {
+      &::before {
+        background-image: url('../images/global/time.svg');
+      }
+    }
+
+    &--email {
+      &::before {
+        background-image: url('../images/global/email.svg');
+      }
+    }
+  }
+
+  &__item-title {
+    font-size: 30px;
+    color: $main;
+    @extend %infant;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 85px;
+
+    @include mq('desktop') {
+      flex-direction: column;
+    }
+
+    @include mq('tablet') {
+      padding-bottom: 30px;
+    }
+
+    @include mq('phone') {
+      padding-top: 20px;
+    }
+  }
+
+  &__img {
+    margin-right: 45px;
+
+    @include mq('desktop') {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__years {
+    display: flex;
+    margin-bottom: 20px;
+
+    @include mq('phone') {
+      flex-direction: column;
+    }
+  }
+
+  &__year {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: $main;
+  }
+
+  &__year-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include mq('phone') {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__signature {
+    display: block;
+    fill: $main;
+    width: 200px;
+    height: 107px;
+  }
+}

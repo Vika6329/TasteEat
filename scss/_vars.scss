@@ -1,0 +1,27 @@
+$white: #fff;
+$black: #000;
+$main: #292E36;
+$text: #555555;
+$accent: #E1B168;
+
+%bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%mask{
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+%infant{
+  font-family: 'CormorantInfant', sans-serif;
+  font-weight: 400;
+}
+
+%josefin{
+  font-family: 'JosefinSans', sans-serif;
+  font-weight: 400;
+}

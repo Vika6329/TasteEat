@@ -1,0 +1,169 @@
+.footer {
+  background-color: $main;
+  color: $white;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 10px;
+
+    @include mq('tablet') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__name {
+    font-size: 22px;
+    @extend %josefin;
+    margin-right: 20px;
+  }
+
+  .logo {
+    @include mq('tablet') {
+      order: 1;
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 70px;
+
+    @include mq('desktop') {
+      flex-wrap: wrap;
+    }
+
+    @include mq('phone') {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__place {
+    display: block;
+    @extend %josefin;
+  }
+
+  &__link {
+    display: block;
+    color: $accent;
+    @extend %josefin;
+  }
+
+  &__form {
+    max-width: 665px;
+    width: 100%;
+
+    @include mq('desktop') {
+      order: 1;
+      margin: 0 auto;
+    }
+  }
+
+  &__box {
+    max-width: 665px;
+    width: 100%;
+    display: flex;
+  }
+
+  &__label {
+    display: block;
+    text-align: center;
+    max-width: 297px;
+    width: 100%;
+    margin: 0 auto 25px;
+
+    @include mq('phone') {
+      margin: 0 0 25px;
+      max-width: 100%;
+      text-align-last: left;
+    }
+  }
+
+  &__input {
+    max-width: 445px;
+    width: 100%;
+    background-color: transparent;
+    padding: 18px 24px;
+    border: 1px solid #858585;
+  }
+
+  &__btn {
+    font-size: 22px;
+    @extend %josefin;
+    background-color: $white;
+    padding: 17px 62px;
+    color: $black;
+
+    @include mq('phone') {
+      padding: 15px;
+    }
+  }
+
+  &__info {
+    @include mq('phone') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__work {
+    text-align: right;
+
+    @include mq('phone') {
+      text-align-last: left;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__work-item {
+    span {
+      color: $accent;
+      margin-right: 5px;
+    }
+  }
+
+  &__bottom {
+    padding: 25px 0;
+    border-top: 1px solid #575B62;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq('desktop') {
+      flex-direction: column;
+    }
+  }
+
+  &__copy {
+    span {
+      color: $accent;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include mq('phone') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list-item {
+
+    color: $accent;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .badge {
+    color: $white;
+  }
+}

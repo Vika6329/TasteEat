@@ -1,0 +1,103 @@
+.reviews {
+  background-color: $main;
+  padding-top: 140px;
+  color: $white;
+
+  @include mq('tablet-2') {
+    padding-top: 80px;
+  }
+
+  @include mq('phone') {
+    padding-top: 50px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: flex;
+    padding-bottom: 120px;
+
+    @include mq('phone') {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__item {
+    background-color: #343942;
+    padding: 10px 40px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #797E89;
+  }
+
+  &__img {
+    margin-right: 30px;
+  }
+
+  &__name {
+    font-size: 30px;
+    @extend %infant;
+  }
+
+  &__town {
+    color: $accent;
+  }
+
+  &__text {
+    letter-spacing: 0.25px;
+    @extend %infant;
+    font-size: 25px;
+
+    @include mq('phone') {
+      font-size: 18px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  .badge {
+    color: $white;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: rgba($white, 0.4);
+    box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.4);
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $white;
+  }
+
+  .swiper {
+    padding-bottom: 100px;
+
+    @include mq('phone') {
+      padding-bottom: 50px;
+    }
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 25px;
+  }
+}

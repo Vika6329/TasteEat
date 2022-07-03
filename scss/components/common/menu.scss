@@ -1,0 +1,130 @@
+.menu {
+  padding: 140px 0;
+
+  @include mq('desktop') {
+    padding: 70px 0;
+  }
+
+  @include mq('phone') {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include mq('desktop') {
+      flex-direction: column;
+    }
+  }
+
+  &__box {
+    max-width: 490px;
+    width: 100%;
+    margin-right: 50px;
+
+    @include mq('desktop') {
+      margin-right: 0;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+  }
+
+  &__img {
+    margin-bottom: 60px;
+
+    @include mq('desktop') {
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__list {
+    margin-top: 50px;
+    max-width: 820px;
+    width: 100%;
+
+    @include mq('desktop') {
+      margin: 50px auto 0;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 75px;
+    }
+  }
+
+  &__item-title {
+    font-size: 36px;
+    color: $main;
+    margin-bottom: 40px;
+    @extend %infant;
+  }
+}
+
+.card {
+  display: flex;
+
+  @include mq('phone') {
+    flex-direction: column;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    margin-right: 20px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+  }
+
+  &__box {
+    position: relative;
+    margin-right: 15px;
+
+    &::after {
+      @include pseudo;
+      right: -75%;
+      bottom: 10px;
+      background-color: #AAAAAA;
+      width: 73%;
+      height: 2px;
+
+      @include mq('tablet') {
+        display: none;
+      }
+    }
+  }
+
+  &__name {
+    @extend %infant;
+    font-size: 30px;
+    color: $main;
+
+    @include mq('phone') {
+      font-size: 25px;
+    }
+  }
+
+  &__price {
+    font-size: 30px;
+    color: $main;
+
+    @include mq('phone') {
+      font-size: 25px;
+    }
+  }
+}

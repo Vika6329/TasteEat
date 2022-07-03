@@ -1,0 +1,235 @@
+.header {
+  background-color: $main;
+  color: $white;
+
+  .logo {
+    @include mq('desktop') {
+      display: none;
+    }
+  }
+
+  &__container {
+    border-bottom: 1px solid $white;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+
+    @include mq('phone') {
+      padding: 25px 0;
+    }
+  }
+
+  &__phone {
+    font-size: 22px;
+    @extend %josefin;
+    padding: 20px 57px;
+    border: 1px solid $accent;
+
+    @include mq('tablet') {
+      padding: 10px;
+    }
+
+    @include mq('phone') {
+      font-size: 15px;
+    }
+  }
+
+  &__reserv {
+    padding: 20px 85px;
+    background-color: $accent;
+    letter-spacing: 0.44px;
+    color: $main;
+    font-size: 22px;
+    @extend %josefin;
+
+    @include mq('tablet') {
+      padding: 10px;
+    }
+
+    @include mq('phone') {
+      font-size: 15px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq('desktop') {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 100px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    @extend %infant;
+
+    @include mq('desktop') {
+      font-size: 80px;
+    }
+
+    @include mq('tablet') {
+      font-size: 60px;
+    }
+
+    @include mq('phone') {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    @extend %josefin;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__img {
+    fill: $white;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.menu-btn {
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+  z-index: 2;
+
+  &::after,
+  &::before,
+  & span {
+    height: 2px;
+    width: 30px;
+    left: 2px;
+    background-color: #fff;
+    transition: transform 0.5s;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    top: 10px;
+  }
+
+  &::after {
+    bottom: 12px;
+  }
+
+  &__line {
+    position: absolute;
+    top: 45%;
+  }
+
+  @include mq('desktop') {
+    display: block;
+  }
+
+  &.menu-btn--active {
+    span {
+      display: none;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 10px;
+    }
+  }
+}
+
+.header-menu {
+  
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @extend %josefin;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  .logo {
+    display: none;
+
+    @include mq('desktop') {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include mq('desktop') {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    text-align: center;
+    padding: 5px 0 80px;
+    height: 100vh;
+    overflow-y: auto;
+    transform: translateY(-200%);
+    background-color: $main;
+    transition: transform 0.5s;
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__link {
+      display: block;
+      padding: 22px 0;
+      transition: background-color 0.5s;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.header-menu--active {
+    transform: translateY(0);
+  }
+}
